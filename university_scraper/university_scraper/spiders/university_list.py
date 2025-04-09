@@ -14,8 +14,6 @@ class UniversityListSpider(scrapy.Spider):
             university_link = row.css('td:nth-child(2) a::attr(href)').get()
             
             university_url = response.urljoin(university_link)
-            # print(university_url)
-            # print(rank, university, town)
             
             yield scrapy.Request(
                 url=university_url,
