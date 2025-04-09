@@ -64,9 +64,6 @@ class UniversityListSpider(scrapy.Spider):
                 'details_link': response.urljoin(response.css("a[itemprop='url']::attr(href)").get()),
         } 
         
-        # print(rank, university, town)
-        # print(additional_info, overview_text, university_identity, university_location) 
-        
         yield{
             'Rank': rank,
             'University': university,
